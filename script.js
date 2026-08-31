@@ -1,6 +1,23 @@
 // ==========================================================================
 // LacakPaket — script.js
 // ==========================================================================
+// Import Firebase SDK dari CDN
+import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-app.js";
+import { getFirestore } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-firestore.js";
+
+const firebaseConfig = {
+  apiKey: "AIzaSyDQT8VTFnkIdKK4bhj3mSYJyhBw2Ux5fZA",
+  authDomain: "lacakpaket-ddf07.firebaseapp.com",
+  projectId: "lacakpaket-ddf07",
+  storageBucket: "lacakpaket-ddf07.firebasestorage.app",
+  messagingSenderId: "225617830485",
+  appId: "1:225617830485:web:a9470e42aa14edead6aadc",
+  measurementId: "G-CNNE7RH9SX"
+};
+
+// Inisialisasi Firebase & Firestore
+const app = initializeApp(firebaseConfig);
+const db = getFirestore(app);
 
 document.addEventListener('DOMContentLoaded', function () {
   var yearEl = document.getElementById('year');
