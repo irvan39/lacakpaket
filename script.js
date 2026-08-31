@@ -80,15 +80,26 @@ function saveUserPaket(resi, data) {
   map[norm] = data;
   saveUserPaketMap(map);
 }
+async function getTrackData(resi) {
+    var norm = normalizeResi(resi);
+    var userMap = getUserPaketMap();
+    if (userMap[norm]) return userMap[norm];
 
-function getTrackData(resi) {
-  var norm = normalizeResi(resi);
-  var userMap = getUserPaketMap();
-  if (userMap[norm]) return userMap[norm];
-  var data = window.TRACK_DATA || {};
-  return data[norm] || null;
+    try {
+        const { doc, getDoc } = await import("https://www.gstatic.com/firebasejs/10.12.0/firebase-firestore.js");
+        const docRef = doc(db, "resi", norm);
+        const docSnap = await getDoc(docRef);
+
+        if (docSnap.exists()) {
+            return docSnap.data();
+        }
+    } catch (e) {
+        console.error("Gagal mengambil data dari Firestore:", e);
+    }
+
+    var data = window.TRACK_DATA || {};
+    return data[norm] || null;
 }
-
 function getStatusLabel(status) {
   var labels = window.STATUS_LABELS || {};
   return labels[status] || status;
