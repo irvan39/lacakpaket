@@ -477,22 +477,20 @@ function initAddPaketForm() {
     var status = statusSelect.value;
     var lokasi = (lokasiInput.value || '').trim() || 'Tidak diketahui';
 
-    if (!resi || !barang || !ekspedisi) {
-      showMsg('Nomor resi, nama barang, dan ekspedisi wajib diisi.', 'error');
-      return;
+  async function trackResi(rawResi) {
+    var resi = normalizeResi(rawResi);
+    if (!resi) {
+        showError('Masukkan nomor resi terlebih dahulu.');
+        return;
     }
-
-    var isUpdate = !!getTrackData(resi);
-
-    var data = {
-      ekspedisi: ekspedisi,
-      status: status,
-      barang: barang,
-      estimasi: ESTIMASI_TEXT[status] || 'Status tidak diketahui',
-      timeline: [
-        { title: TIMELINE_TITLE[status] || 'Paket didaftarkan', time: formatNow(), location: lokasi }
-      ]
-    };
+    var data = await getTrackData(resi); // <--- Tambahkan "await" di sini
+    if (!data) {
+        showError('Nomor resi "' + resi + '" tidak ditemukan. Periksa kembali penulisannya.');
+        return;
+    }
+    showResult(resi, data);
+    upsertHistory(resi, data);
+}
 
     saveUserPaket(resi, data);
     upsertHistory(resi, data);
