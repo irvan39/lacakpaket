@@ -1,0 +1,312 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Perusahaan — LacakPaket</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css?v=20260830" />
+  </head>
+  <body>
+    <header class="topbar">
+      <div class="topbar-inner">
+        <a href="index.html" class="brand">LACAK<span>PAKET.</span></a>
+
+        <nav class="navlinks" id="navlinks">
+          <a href="#tentang" class="navlink" data-nav="tentang">Tentang Kami</a>
+          <a href="#karier" class="navlink" data-nav="karier">Karier</a>
+          <a href="#kontak" class="navlink" data-nav="kontak">Kontak</a>
+        </nav>
+
+        <button
+          type="button"
+          class="nav-toggle"
+          id="navToggle"
+          aria-label="Buka menu"
+          aria-expanded="false"
+        >
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </header>
+
+    <main class="page" id="top">
+      <section class="panel" id="tentang">
+        <div class="panel-inner about-wide">
+          <div class="about-grid">
+            <div class="about-copy">
+              <p class="eyebrow">Perusahaan</p>
+              <h2>Tentang Kami</h2>
+              <p class="panel-sub">
+                LacakPaket adalah proyek yang kami kembangkan selama magang 2
+                bulan di Global Intermedia Yogyakarta. Kami merupakan siswa SMK
+                Telekomunikasi Darul Ulum jurusan Rekayasa Perangkat Lunak (RPL)
+                yang terdiri dari M. Hafidho Darmawan, Irvan Wiryawan, dan M.
+                Rafansyah Syaputra.
+              </p>
+              <p class="panel-sub">
+                Website ini dibuat untuk memudahkan pengguna dalam melacak
+                status dan perjalanan paket dalam satu tempat. Melalui proyek
+                ini, kami juga menerapkan ilmu yang telah dipelajari di sekolah
+                sekaligus mendapatkan pengalaman dalam mengembangkan website.
+              </p>
+            </div>
+
+            <div class="about-visual">
+              <div class="photo-trio" id="photoTrio">
+                <figure
+                  class="photo slot-big"
+                  tabindex="0"
+                  role="button"
+                  aria-label="Tampilkan foto 1"
+                >
+                  <img src="img/profil/1.jpeg" alt="Foto anggota tim 1" />
+                </figure>
+                <figure
+                  class="photo slot-medium"
+                  tabindex="0"
+                  role="button"
+                  aria-label="Tampilkan foto 2"
+                >
+                  <img src="img/profil/2.jpeg" alt="Foto anggota tim 2" />
+                </figure>
+                <figure
+                  class="photo slot-small"
+                  tabindex="0"
+                  role="button"
+                  aria-label="Tampilkan foto 3"
+                >
+                  <img src="img/profil/3.jpeg" alt="Foto anggota tim 3" />
+                </figure>
+              </div>
+              <div class="photo-trio-nav">
+                <button
+                  type="button"
+                  class="photo-nav-btn"
+                  id="photoTrioPrev"
+                  aria-label="Foto sebelumnya"
+                >
+                  &lsaquo;
+                </button>
+                <div class="card3d-dots" id="photoTrioDots"></div>
+                <button
+                  type="button"
+                  class="photo-nav-btn"
+                  id="photoTrioNext"
+                  aria-label="Foto berikutnya"
+                >
+                  &rsaquo;
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="panel" id="karier">
+        <div class="panel-inner about-wide">
+          <div class="karier-grid">
+            <div class="karier-copy">
+              <p class="eyebrow">Perusahaan</p>
+              <h2>Proyek PKL Kami</h2>
+              <p class="panel-sub">
+                LacakPaket dibuat sebagai proyek magang (PKL) sekolah selama 2
+                bulan di Global Intermedia Yogyakarta, jadi belum ada lowongan
+                kerja resmi di sini.
+              </p>
+              <p class="panel-sub">
+                Halaman ini kami buat untuk menampilkan cuplikan tampilan
+                website yang kami kembangkan, sekaligus melengkapi struktur
+                situs sebagai bagian dari pembelajaran kami. Kalau kamu tertarik
+                ngobrol seputar proyek ini atau sekadar berbagi masukan, boleh
+                banget hubungi kami lewat kontak di bawah.
+              </p>
+            </div>
+
+            <div class="karier-visual">
+              <div class="card3d-stage" id="karierStage">
+                <!-- Ganti src ketiga gambar di bawah dengan screenshot website kamu sendiri -->
+                <figure
+                  class="card3d-item"
+                  data-pos="left"
+                  tabindex="0"
+                  role="button"
+                  aria-label="Tampilkan screenshot 1"
+                >
+                  <img
+                    src="img/projek/1.jpeg"
+                    alt="Screenshot 1 website LacakPaket"
+                  />
+                </figure>
+                <figure
+                  class="card3d-item"
+                  data-pos="front"
+                  tabindex="0"
+                  role="button"
+                  aria-label="Tampilkan screenshot 2"
+                >
+                  <img
+                    src="img/projek/2.png"
+                    alt="Screenshot 2 website LacakPaket"
+                  />
+                </figure>
+                <figure
+                  class="card3d-item"
+                  data-pos="right"
+                  tabindex="0"
+                  role="button"
+                  aria-label="Tampilkan screenshot 3"
+                >
+                  <img
+                    src="img/projek/3.jpeg"
+                    alt="Screenshot 3 website LacakPaket"
+                  />
+                </figure>
+              </div>
+              <div class="card3d-dots" id="karierDots"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="panel" id="kontak">
+        <div class="panel-inner kontak-wide">
+          <p class="eyebrow">Perusahaan</p>
+          <h2>Kontak</h2>
+          <p class="panel-sub">
+            Ada pertanyaan, masukan, atau ingin kerja sama? Silakan hubungi kami
+            lewat salah satu kanal berikut.
+          </p>
+          <div class="faq" style="margin-top: 6px">
+            <div class="faq-item">
+              <p class="faq-q">Email</p>
+              <ul class="contact-list">
+                <li>
+                  <a href="mailto:rafansyah1155@gmail.com" class="contact-link"
+                    >rafansyah1155@gmail.com</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="mailto:irvanwiryawan305@gmail.com"
+                    class="contact-link"
+                    >irvanwiryawan305@gmail.com</a
+                  >
+                </li>
+                <li>
+                  <a href="mailto:hafidho109@gmail.com" class="contact-link"
+                    >hafidho109@gmail.com</a
+                  >
+                </li>
+              </ul>
+            </div>
+            <div class="faq-item">
+              <p class="faq-q">Media Sosial</p>
+              <ul class="contact-list">
+                <li>
+                  <a
+                    href="https://instagram.com/t4l1b_an"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="contact-link"
+                    >Instagram: @t4l1b_an</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="https://instagram.com/rfnn_syh"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="contact-link"
+                    >Instagram: @rfnn_syh</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="https://instagram.com/hfidhoo"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="contact-link"
+                    >Instagram: @hfidhoo</a
+                  >
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="footer-inner">
+        <div class="footer-top">
+          <div class="footer-brand">
+            <a href="index.html" class="brand">LACAK<span>PAKET.</span></a>
+            <p class="footer-tagline">
+              Pantau kiriman dari gudang, di jalan, sampai depan pintu — satu
+              tempat untuk semua ekspedisi.
+            </p>
+            <div class="footer-social">
+              <a href="perusahaan.html#kontak" aria-label="Instagram">
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.6"
+                >
+                  <rect x="3" y="3" width="18" height="18" rx="5" />
+                  <circle cx="12" cy="12" r="4" />
+                  <circle cx="17.3" cy="6.7" r="1" />
+                </svg>
+              </a>
+              <a href="perusahaan.html#kontak" aria-label="Email">
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.6"
+                >
+                  <rect x="3" y="5" width="18" height="14" rx="3" />
+                  <path d="M4 7l8 6 8-6" />
+                </svg>
+              </a>
+            </div>
+          </div>
+
+          <div class="footer-cols">
+            <div class="footer-col">
+              <h4>Fitur</h4>
+              <a href="index.html">Lacak Paket</a>
+              <a href="riwayat.html">Riwayat</a>
+              <a href="bantuan.html">Bantuan</a>
+            </div>
+            <div class="footer-col">
+              <h4>Perusahaan</h4>
+              <a href="perusahaan.html#tentang">Tentang Kami</a>
+              <a href="perusahaan.html#karier">Karier</a>
+              <a href="perusahaan.html#kontak">Kontak</a>
+            </div>
+            <div class="footer-col">
+              <h4>Legal</h4>
+              <a href="privasi.html">Kebijakan Privasi</a>
+              <a href="syarat.html">Syarat Layanan</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="footer-bottom">
+          <p>© <span id="year"></span> LacakPaket. Semua hak dilindungi.</p>
+          <p class="footer-made">Dibuat untuk kamu yang suka mantau paket.</p>
+        </div>
+      </div>
+    </footer>
+
+    <script src="data.js"></script>
+    <script src="script.js?v=20260830"></script>
+  </body>
+</html>
